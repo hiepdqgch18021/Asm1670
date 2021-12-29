@@ -1,0 +1,27 @@
+{
+    "name": "codeasm1670",
+    "version": "1.0.0",
+    "description": "Assignment appDev1670",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/hiepdqgch18021/Asm1670.git"
+    },
+    "author": "Hiepdqgch18021",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/hiepdqgch18021/git-demo/issues"
+    },
+    "homepage": "https://github.com/hiepdqgch18021/git-demo#readme",
+    "dependencies": {
+        "express": "^4.17.2",
+        "express-session": "^1.17.2",
+        "hbs": "^4.2.0",
+        "heroku": "^7.59.2",
+        "mongodb": "^4.2.2",
+        "nodemon": "^2.0.15"
+    }
+}
