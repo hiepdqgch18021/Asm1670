@@ -28,23 +28,23 @@
         <input type="submit" value="search">
 </form>
 
-<h1 id="courseTitle">List Of Course</h1>
+<h1 id="courseTitle">My Courses </h1>
 
 
 <form action="/viewCourse" method="POST" id="listTotal" >   
 
 <table class="table table-bordered">
 <tr>
-    <th>Course</th>
-    <th>List of trainee</th>
-    <th>List Of Grade</th>
+    <th>Course Name</th>
+    <th>View list trainee in course</th>
+    <th>List Grade Of Trainee</th>
 
 </tr>
 {{#each dataTotal}}
 <tr>
-  <td><a class="btn btn-primary" href="/Trainer/CourseDetail?id={{_id}}" role="button">{{CourseID}}</a></td>
-  <td><a class="btn btn-primary" href="/Trainer/listTrainee?id={{_id}}" role="button">{{TraineeID}}</a></td>
-  <td><a class="btn btn-primary" href="/Trainer/GradeTrainee?id{{_id}}" role="button">{{GradeID}}</a></td>
+  <td><a  href="/Trainer/CourseDetail?id={{_id}}" >{{CourseID}}</a></td>
+  <td><a  href="/Trainer/listTrainee?id={{_id}}" >view</a></td>
+  <td><a  href="/Trainer/GradeTrainee?id{{_id}}" >view Grades</a></td>
 </tr>
 {{/each}}
 </table>

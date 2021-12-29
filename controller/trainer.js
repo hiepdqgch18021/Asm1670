@@ -33,9 +33,7 @@ router.get('/GradeTrainee', async(req, res) => {
 
 
 router.get('/CourseDetail', async(req, res) => {
-
     const idCourse = req.query.id;
-    console.log(idCourse);
     const client = await MongoClient.connect(url);
     const dbo = client.db(DATABASE_NAME);
     var ObjectId = require('mongodb').ObjectId;
