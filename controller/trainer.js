@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router()
 const DATABASE_NAME = "Appdev1670";
 const MongoClient = require('mongodb').MongoClient;
-// const url = 'mongodb://localhost:27017';
+//const url = 'mongodb://localhost:27017';
 const url = 'mongodb+srv://hiepdqgch18021:hiep1234@cluster0.jks3x.mongodb.net/Appdev1670'
 
 
