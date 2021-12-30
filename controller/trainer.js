@@ -76,8 +76,15 @@ router.post('/searchTotal', async(req, res) => {
 
 router.post('/addGrade', async(req, res) => {
     const nameInput = req.body.txtTraineeGrade;
+    const traineeId = req.body.txtTraineeId;
+    const courseName = req.body.txtCourseName;
     const typeGrade = req.body.typeGrade;
-    const newGrade = { name: nameInput, TypeGrade: typeGrade }
+    const newGrade = {
+        name: nameInput,
+        TraineeID: traineeId,
+        CourseName: courseName,
+        TypeGrade: typeGrade
+    }
     const client = await MongoClient.connect(url);
     const dbo = client.db(DATABASE_NAME);
     await dbo.collection("listGrade").insertOne(newGrade);
@@ -88,7 +95,7 @@ router.post('/searchGrade', async(req, res) => {
     const searchInput = req.body.txtSearch;
     const client = await MongoClient.connect(url);
     const dbo = client.db(DATABASE_NAME);
-    const allGrade = await dbo.collection("listGrade").find({ name: searchInput }).toArray();
+    const allGrade = await dbo.collection("listGrade").find({ TraineeID: searchInput }).toArray();
     res.render('GradeTrainee', { data: allGrade })
 });
 

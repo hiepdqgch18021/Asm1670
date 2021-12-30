@@ -16,6 +16,8 @@
 <form action="/trainer/addGrade" method="post" class="inputGrade" >
 Name Of Trainee: <input type="text" name="txtTraineeGrade">
 <br><br> 
+ID Of Trainee: <input type="text" name="txtTraineeId"><br><br>
+Course Name : <input type="text" name="txtCourseName"><br><br>
 Type Of Grade:
                 <select name="typeGrade">
                 <option value="pass">Pass</option>
@@ -27,23 +29,28 @@ Type Of Grade:
 <h1 id="titleGrade">GRADE TABLE</h1>
 
 <form action="/trainer/searchGrade" method="POST" class="searchGrade">
-Search Grade <input type="text" name="txtSearch">
+Search Grade with trainee ID <input type="text" name="txtSearch">
 <input type="submit" value="search">
 </form>
 
 <table class="table table-bordered" id="tableGrade">
 <tr>
-    <th>Name</th>
+    <th>Name Of Trainee</th>
+    <th>ID Of Trainee</th>
+    <th>Course Name</th>
     <th>Grades</th>
-    <th>Activity </th>
+    <th>Activity</th>
 </tr>
     {{#each data}}
     <tr>
         <td>{{name}} </td>
+        <td>{{TraineeID}}</td>
+        <td>{{CourseName}}</td>
         <td>{{TypeGrade}} </td>
         <td id="menuGrade">
-            <a href="/Trainer/deleteGrade?id={{_id}}"> Delete </a>
             <a href="/Trainer/editGrade?id={{_id}}"> Edit </a>
+            <a href="/Trainer/deleteGrade?id={{_id}}"> delete </a>
+
         </td>
     </tr>
     {{/each}}

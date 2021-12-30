@@ -11,7 +11,10 @@
 
 <Form action="/Trainer/updateGrade" method="post">
 <input type="hidden" name="txtId" value="{{changeGrade._id}}">
-    Name Of Trainee: <input type="text" name="txtTraineeGrade" value="{{changeGrade.name}}">
+
+    Name Of Trainee:{{changeGrade.name}} 
+    <br><br>
+    ID of Trainee: {{changeGrade.TraineeID}}
     <br><br>
     Type Of Grade:
                     <select name="typeGrade" value="{{changeGrade.TypeGrade}}">

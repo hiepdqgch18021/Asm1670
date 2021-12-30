@@ -31,9 +31,29 @@
         width: 1000px;
     }
     /* ------------------------------------------------------------------------List trainee */
-    /* #bodyTrainee {
-        background-image: url(images/backgroundListTrainee.jpg);
-    } */
+    
+    #headerIndex {
+        list-style: none;
+    }
+    
+    #logoIndex {
+        width: 700px;
+        height: 250px;
+        margin-top: 20px;
+        margin-right: 200px;
+        margin-left: 20px;
+        /* display: block; */
+    }
+    
+    #listInfo {
+        text-decoration: none;
+    }
+    
+    #profileTrainer {
+        display: inline-block;
+        margin-left: 70%;
+        margin-top: 0px;
+    }
     
     #traineeTitle {
         margin-left: 40%;
