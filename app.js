@@ -9,6 +9,12 @@ app.use(session({ secret: '124447yd@@$%%#', cookie: { maxAge: 60000 }, saveUnini
 const TrainerCtl = require('./controller/Trainer')
 app.use('/Trainer', TrainerCtl)
 
+app.get('/', async(req, res) => {
+
+    res.render('index.hbs');
+
+})
+
 const PORT = process.env.PORT || 5010
 app.listen(PORT)
 console.log("Server is running! " + PORT)

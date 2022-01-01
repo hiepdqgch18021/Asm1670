@@ -1,15 +1,42 @@
     /* -----------------------------------------------Trainer Index  */
-    /* #bodyIndex {
-        background-image: url(images/backgroundindex.png);
-    } */
+    
+    #headerIndex {
+        background-color: aquamarine;
+        display: flex;
+        height: 300px;
+    }
+    
+    #blockLogoIndex {
+        background-color: rgba(0, 255, 234, 0.726);
+        width: 700px;
+        height: 250px;
+        margin-top: 20px;
+        margin-right: 200px;
+        margin-left: 20px;
+        border-radius: 100%;
+    }
     
     #logoIndex {
-        width: 500px;
-        height: 195px;
-        margin-left: 30%;
+        width: 700px;
+        height: 250px;
+        margin-top: 10px;
+        margin-right: 200px;
+        margin-left: 20px;
+        margin-bottom: 10px;
+        border-radius: 100%;
+    }
+    
+    #listInfo {
+        text-decoration: none;
+    }
+    
+    #profileTrainer {
+        margin-top: 40px;
+        display: flex;
     }
     
     .searchCourse {
+        margin-top: 20px;
         margin-left: 70%;
     }
     
@@ -32,27 +59,11 @@
     }
     /* ------------------------------------------------------------------------List trainee */
     
-    #headerIndex {
-        list-style: none;
-    }
-    
-    #logoIndex {
-        width: 700px;
-        height: 250px;
+    .homeButton {
+        /* background-image: url(images/homeButton.png); */
         margin-top: 20px;
-        margin-right: 200px;
         margin-left: 20px;
-        /* display: block; */
-    }
-    
-    #listInfo {
-        text-decoration: none;
-    }
-    
-    #profileTrainer {
-        display: inline-block;
-        margin-left: 70%;
-        margin-top: 0px;
+        margin-bottom: 20px;
     }
     
     #traineeTitle {

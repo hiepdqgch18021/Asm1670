@@ -2,9 +2,9 @@ const express = require('express')
 const router = express.Router()
 const DATABASE_NAME = "Appdev1670";
 const MongoClient = require('mongodb').MongoClient;
-//const url = 'mongodb://localhost:27017';
-const url = 'mongodb+srv://hiepdqgch18021:hiep1234@cluster0.jks3x.mongodb.net/Appdev1670'
 
+// const url = 'mongodb://localhost:27017'
+const url = 'mongodb+srv://hiepdqgch18021:hiep1234@cluster0.jks3x.mongodb.net/Appdev1670'
 
 router.get('/', async(req, res) => {
     const client = await MongoClient.connect(url);
@@ -12,6 +12,10 @@ router.get('/', async(req, res) => {
     const total = await dbo.collection("totalCourse").find({}).toArray();
     res.render('trainerIndex', { dataTotal: total });
     return dbo;
+})
+
+router.get('/trainer', async(req, res) => {
+    res.redirect("/trainer")
 })
 
 
@@ -31,18 +35,16 @@ router.get('/GradeTrainee', async(req, res) => {
     return dbo;
 })
 
-
+// --------------------------------------------------- course Detail
 router.get('/CourseDetail', async(req, res) => {
     const idCourse = req.query.id;
     const client = await MongoClient.connect(url);
     const dbo = client.db(DATABASE_NAME);
     var ObjectId = require('mongodb').ObjectId;
     const dataCourse = await dbo.collection("listCourse").find({
-        'id': idCourse
+        'name': idCourse
     }).toArray();
-    console.log(dataCourse);
     res.render('CourseDetail', { CourseData: dataCourse });
-
     return dbo;
 
 })
@@ -72,7 +74,7 @@ router.post('/searchTotal', async(req, res) => {
     res.render('trainerIndex', { dataTotal: listCourse })
 });
 
-// -- -- -- -- -- -- -- -- -- -- -- ---------------- ------------------------ -- --GradeTrainee
+// -- -- -- -- -- -- -- -- -- -- -- ---------------- ----------------------------GradeTrainee
 
 router.post('/addGrade', async(req, res) => {
     const nameInput = req.body.txtTraineeGrade;

@@ -12,6 +12,11 @@
 </head>
 <body id="gradeBody" >
 
+<div class="homeButton">
+    <form action="/trainer">
+    <input type="submit" value="home"  class="fa fa-home" aria-hidden="true">
+    </form>
+</div>
 
 <form action="/trainer/addGrade" method="post" class="inputGrade" >
 Name Of Trainee: <input type="text" name="txtTraineeGrade">
@@ -50,7 +55,6 @@ Search Grade with trainee ID <input type="text" name="txtSearch">
         <td id="menuGrade">
             <a href="/Trainer/editGrade?id={{_id}}"> Edit </a>
             <a href="/Trainer/deleteGrade?id={{_id}}"> delete </a>
-
         </td>
     </tr>
     {{/each}}

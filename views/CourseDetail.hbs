@@ -11,18 +11,26 @@
 <h1>INFORMATION OF COURSE</h1>
 <table class="table table-bordered">
 <tr>
-
-    <th>Name</th>
-    <th>Schedule</th>
+    <th>ID</th>
+    <th>Time Start</th>
+    <th>Time Ending</th>
+    <th>Slot</th>
+    <th>Tuition</th>
 </tr>
 
+<tr>
 {{#each CourseData}}
-<tr>  
-    <td>{{name}} </td>
-    <td>{{schedule}}</td>
-</tr>
-{{/each}}
 
+<tr>  
+    <td>{{ID}}</td>
+    <td>{{timeStart}}</td>
+    <td>{{timeEnd}}</td>
+    <td>40</td>
+    <td>{{tuition}}</td>
+</tr>
+
+{{/each}}
+</tr>
     </table>
 </body>
 </html>
