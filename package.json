@@ -19,9 +19,7 @@
     "homepage": "https://github.com/hiepdqgch18021/git-demo#readme",
     "dependencies": {
         "express": "^4.17.2",
-        "express-session": "^1.17.2",
         "hbs": "^4.2.0",
-        "heroku": "^7.59.2",
         "mongodb": "^4.2.2",
         "nodemon": "^2.0.15"
     }
